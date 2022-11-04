@@ -87,8 +87,8 @@ local function TabButton_Select(self)
 		texture:Show()
 	end
 
-	self.text:ClearAllPoints()
-	self.text:SetPoint("CENTER", 0, -1)
+	-- self.text:ClearAllPoints()
+	-- self.text:SetPoint("CENTER", 0, -1)
 
 	self:Disable()
 	self._tabSelected = 1
@@ -235,8 +235,9 @@ local function Frame_AddTab(self, text, data, tooltipText)
 	local name = self:GetName().."Tab"..index
 
 	self.numTabs = index
-	local button = CreateFrame("Button", name, self, "OptionsFrameTabButtonTemplate")
-	button.text = _G[name.."Text"]
+	local button = CreateFrame("Button", name, self)
+	button:SetSize(string.utf8len(text) * 10 + 40 + 20, 24)
+	button.text = button:CreateFontString(name.."ButtonFontString")
 	button.data = data
 	button.tooltipText = tooltipText
 	button:SetID(index)
@@ -246,28 +247,73 @@ local function Frame_AddTab(self, text, data, tooltipText)
 
 	button:SetMotionScriptsWhileDisabled(true)
 	button:SetHitRectInsets(10, 10, 5, 0)
+	button.text:ClearAllPoints()
+	button.text:SetPoint("LEFT", 14, -3)
+	button.text:SetPoint("RIGHT", -12, -3)
 
-	button.deselectTextures = {}
-	tinsert(button.deselectTextures, _G[name.."Left"])
-	tinsert(button.deselectTextures, _G[name.."Middle"])
-	tinsert(button.deselectTextures, _G[name.."Right"])
+	-- Create textures for the current tab
 
-	button.selectTextures = {}
-	tinsert(button.selectTextures, _G[name.."LeftDisabled"])
-	tinsert(button.selectTextures, _G[name.."MiddleDisabled"])
-	tinsert(button.selectTextures, _G[name.."RightDisabled"])
+	local TexturesActiveLeft = button:CreateTexture(name .. "LeftDisabled", "BORDER")
+	TexturesActiveLeft:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-ActiveTab")
+	TexturesActiveLeft:SetSize(20, 24)
+	TexturesActiveLeft:SetPoint("BOTTOMLEFT", 0, -3)
+	TexturesActiveLeft:SetTexCoord(0, 0.15625, 0, 1.0)
+
+	local TexturesActiveMiddle = button:CreateTexture(name .. "MiddleDisabled", "BORDER")
+	TexturesActiveMiddle:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-ActiveTab")
+	TexturesActiveMiddle:SetSize(string.utf8len(text) * 10 + 20, 24)
+	TexturesActiveMiddle:SetPoint("LEFT", TexturesActiveLeft, "RIGHT")
+	TexturesActiveMiddle:SetTexCoord(0.15625, 0.84375, 0, 1.0)
+
+	local TexturesActiveRight = button:CreateTexture(name .. "RightDisabled", "BORDER")
+	TexturesActiveRight:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-ActiveTab")
+	TexturesActiveRight:SetSize(20, 24)
+	TexturesActiveRight:SetPoint("LEFT", TexturesActiveMiddle, "RIGHT")
+	TexturesActiveRight:SetTexCoord(0.84375, 1.0, 0, 1.0)
+
+	local TexturesInActiveLeft = button:CreateTexture(name .. "Left", "BORDER");
+	TexturesInActiveLeft:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-InActiveTab")
+	TexturesInActiveLeft:SetSize(20, 16)
+	TexturesInActiveLeft:SetPoint("TOPLEFT")
+	TexturesInActiveLeft:SetTexCoord(0, 0.15625, 0, 1.0)
+
+	local TexturesInActiveMiddle = button:CreateTexture(name .. "Middle", "BORDER");
+	TexturesInActiveMiddle:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-InActiveTab")
+	TexturesInActiveMiddle:SetSize(string.utf8len(text) * 10 + 20, 16)
+	TexturesInActiveMiddle:SetPoint("LEFT", TexturesInActiveLeft, "RIGHT")
+	TexturesInActiveMiddle:SetTexCoord(0.15625, 0.84375, 0, 1.0)
+
+	local TexturesInActiveRight = button:CreateTexture(name .. "Right", "BORDER");
+	TexturesInActiveRight:SetTexture("Interface\\OptionsFrame\\UI-OptionsFrame-InActiveTab")
+	TexturesInActiveRight:SetSize(20, 16)
+	TexturesInActiveRight:SetPoint("LEFT", TexturesInActiveMiddle, "RIGHT")
+	TexturesInActiveRight:SetTexCoord(0.84375, 1.0, 0, 1.0)
+
+	button.deselectTextures = { TexturesActiveLeft, TexturesActiveMiddle, TexturesActiveRight }
+	button.selectTextures = { TexturesInActiveLeft, TexturesInActiveMiddle, TexturesInActiveRight }
+
+	button:SetNormalFontObject(GameFontNormalSmall)
+	button:SetHighlightFontObject(GameFontHighlightSmall)
+	button:SetDisabledFontObject(GameFontHighlightSmall)
+	button:SetHighlightTexture("Interface\\PaperDollInfoFrame\\UI-Character-Tab-Highlight", "ADD")
+	button.HighlightTexture = button:GetHighlightTexture()
+	button.HighlightTexture:ClearAllPoints()
+	button.HighlightTexture:SetPoint("LEFT", button, "LEFT", 10, -4)
+	button.HighlightTexture:SetPoint("RIGHT", button, "RIGHT", -10, -4)
 
 	if self.lastTab then
 		button:SetPoint("LEFT", self.lastTab, "RIGHT", -18, 0)
 	else
 		button:SetPoint("BOTTOMLEFT", self, "TOPLEFT", 6, -3)
 	end
+	
 	self.lastTab = button
 	tinsert(self.tabButtons, button)
 
 	button:SetScript("OnClick", TabButton_OnClick)
 	button:SetScript("OnEnter", TabButton_OnEnter)
 	button:SetScript("OnLeave", TabButton_OnLeave)
+	
 	TabButton_Deselect(button, 1)
 
 	return index, button
