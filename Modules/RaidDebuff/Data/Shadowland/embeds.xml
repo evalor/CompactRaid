@@ -2,4 +2,5 @@
 	<Script file="PartyDungeons.lua"/>
 	<Script file="CastleNathria.lua"/>
 	<Script file="SanctumofDonimation.lua"/>
+	<Script file="Sepulcher.lua"/>
 </Ui>

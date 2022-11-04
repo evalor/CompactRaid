@@ -9,22 +9,7 @@ local module = CompactRaid:GetModule("RaidDebuff")
 if not module then return end
 
 local TIER = 9 -- Shadowlands
-local INSTANCE
-
-local SEASON_SPELLS = {
-	[209858] = 2, -- 死疽
-	[240443] = 2, -- 爆裂
-	[240559] = 2, -- 重伤
-	[342494] = 2, -- 狂妄吹嘘，S1
-	[355732] = 2, -- 融化灵魂
-	[356667] = 2, -- 刺骨之寒
-	[356925] = 2, -- 屠戮
-}
-local function RegisterSeasonSpells(INSTANCE)
-	for spellID, priority in pairs(SEASON_SPELLS) do
-		module:RegisterDebuff(TIER, INSTANCE, 0, spellID, priority)
-	end
-end
+local INSTANCE -- 5人本
 
 INSTANCE = 1194 -- 塔扎维什，帷纱集市
 module:RegisterDebuff(TIER, INSTANCE, 0, 356011) -- 光线切分者
@@ -47,6 +32,7 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 356408) -- 大地践踏
 module:RegisterDebuff(TIER, INSTANCE, 0, 347744) -- 迅斩
 module:RegisterDebuff(TIER, INSTANCE, 0, 350134) -- 永恒吐息
 module:RegisterDebuff(TIER, INSTANCE, 0, 355465) -- 投掷巨石
+module:RegisterDebuff(TIER, INSTANCE, 0, 354334, 6) -- 被钩住
 
 INSTANCE = 1187 -- 伤逝剧场
 module:RegisterDebuff(TIER, INSTANCE, 0, 333299) -- 荒芜诅咒
@@ -71,6 +57,7 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 341949) -- 枯萎凋零
 INSTANCE = 1183 -- 凋魂之殇
 module:RegisterDebuff(TIER, INSTANCE, 0, 336258) -- 落单狩猎
 module:RegisterDebuff(TIER, INSTANCE, 0, 331818) -- 暗影伏击
+module:RegisterDebuff(TIER, INSTANCE, 0, 333353) -- 暗影伏击
 module:RegisterDebuff(TIER, INSTANCE, 0, 329110) -- 软泥注射
 module:RegisterDebuff(TIER, INSTANCE, 0, 325552) -- 毒性裂击
 module:RegisterDebuff(TIER, INSTANCE, 0, 336301) -- 裹体之网
@@ -111,6 +98,7 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 334913) -- 死亡之主
 module:RegisterDebuff(TIER, INSTANCE, 0, 325725) -- 寰宇操控
 module:RegisterDebuff(TIER, INSTANCE, 0, 328987) -- 狂热
 module:RegisterDebuff(TIER, INSTANCE, 0, 334496) -- 催眠光粉
+module:RegisterDebuff(TIER, INSTANCE, 0, 334505, 6) -- 光尘之梦
 module:RegisterDebuff(TIER, INSTANCE, 0, 339978) -- 安抚迷雾
 module:RegisterDebuff(TIER, INSTANCE, 0, 333250) -- 放血之击
 module:RegisterDebuff(TIER, INSTANCE, 0, 322746) -- 堕落之血
@@ -120,7 +108,8 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 331847) -- W-00F
 module:RegisterDebuff(TIER, INSTANCE, 0, 327649) -- 粉碎灵魂
 module:RegisterDebuff(TIER, INSTANCE, 0, 331379) -- 润滑剂
 module:RegisterDebuff(TIER, INSTANCE, 0, 332678) -- 龟裂创伤
-module:RegisterDebuff(TIER, INSTANCE, 0, 323692) -- 奥术易伤
+module:RegisterDebuff(TIER, INSTANCE, 0, 323687) -- 奥术闪电
+--module:RegisterDebuff(TIER, INSTANCE, 0, 323692) -- 奥术易伤
 module:RegisterDebuff(TIER, INSTANCE, 0, 334535) -- 啄裂
 
 INSTANCE = 1186 -- 晋升高塔
@@ -155,6 +144,7 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 326632) -- 石化血脉
 module:RegisterDebuff(TIER, INSTANCE, 0, 323650) -- 萦绕锁定
 module:RegisterDebuff(TIER, INSTANCE, 0, 326874) -- 脚踝撕咬
 module:RegisterDebuff(TIER, INSTANCE, 0, 340446) -- 嫉妒之印
+module:RegisterDebuff(TIER, INSTANCE, 0, 323437) -- 傲慢罪印
 
 INSTANCE = 1189 -- 赤红深渊
 module:RegisterDebuff(TIER, INSTANCE, 0, 326827) -- 恐惧之缚
