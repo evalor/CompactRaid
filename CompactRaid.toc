@@ -1,4 +1,4 @@
-## Interface: 10000
+## Interface: 100000
 ## Title: CompactRaid
 ## Version: 7.0.0
 ## Author: Abin
