@@ -79,7 +79,7 @@ module:RegisterDebuff(TIER, INSTANCE, BOSS, 360114) -- 幻磷裂隙
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 365297) -- 挤压棱镜[可驱散]
 
 BOSS = 2469 -- 安度因·乌瑞恩
---module:RegisterDebuff(TIER, INSTANCE, BOSS, 361817) -- 灭愿者[常驻优先级请设定低于其他DEBUFF或者不监控]
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 361817, 0) -- 忽略这个debuff 灭愿者[常驻优先级请设置其他DEBUFF或者不监控]
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 366849) -- 御言术：痛
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 365293) -- 亵渎屏障
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 361993) -- 绝望
@@ -124,3 +124,11 @@ module:RegisterDebuff(TIER, INSTANCE, BOSS, 365150) -- 统御符文
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 365219) -- 痛苦之链
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 365222) -- 痛苦之链
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 365153) -- 统御意志
+
+BOSS = 0 -- General Raid Trash
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 366183) -- 财团标志
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 365463, 4) -- 憎恨浪潮
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 365866, 4) -- 爆炸武器
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 365720, 4) -- 统御之握
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 366731, 4) -- 弧光喷射
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 366189, 4) -- 凌光闪烁

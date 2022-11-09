@@ -113,3 +113,14 @@ module:RegisterDebuff(TIER, INSTANCE, BOSS, 351451) -- 嗜睡诅咒
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 351092) -- 动荡能量
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 351091) -- 动荡能量
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 348064) -- 哀恸箭
+
+BOSS = 0 -- General Raid Trash
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 355212) -- 恐怖怒嚎
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 357553) -- 活动炸弹
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 358770) -- 极度痛苦
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 355070) -- 死亡印记
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 356139) -- 强化长矛
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 357288) -- 冥河之握
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 357128) -- 狱卒锁链
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 358699) -- 致命的命运
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 357565) -- 烈焰护手

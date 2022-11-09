@@ -107,3 +107,12 @@ module:RegisterDebuff(TIER, INSTANCE, BOSS, 327089) -- 喂食时间
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 332794) -- 致命灵巧
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 329875) -- 屠戮
 module:RegisterDebuff(TIER, INSTANCE, BOSS, 329906) -- 屠戮
+
+BOSS = 0 -- General Raid Trash
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 339447) -- 惩罚
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 341900) -- 黑暗印记
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 341586) -- 伏击
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 341196) -- 暴露弱点
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 316859) -- 破甲一击
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 339525) -- 浓缩心能
+module:RegisterDebuff(TIER, INSTANCE, BOSS, 340630) -- 腐烂
