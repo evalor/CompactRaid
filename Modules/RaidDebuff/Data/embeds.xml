@@ -5,4 +5,5 @@
 	<Include file="Legion\embeds.xml"/>
 	<Include file="BattleForAzeroth\embeds.xml"/>
 	<Include file="Shadowland\embeds.xml"/>
+	<Include file="Dragonflight\embeds.xml"/>
 </Ui>

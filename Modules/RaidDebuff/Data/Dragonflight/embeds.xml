@@ -1,0 +1,5 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="DragonIsles.lua"/>
+    <Script file="PartyDungeons.lua"/>
+	<Script file="VaultoftheIncarnates.lua" />
+</Ui>
