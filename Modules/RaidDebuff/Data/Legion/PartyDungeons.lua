@@ -183,11 +183,17 @@ module:RegisterDebuff(TIER, INSTANCE, 1825, 227508)     -- 群体忏悔 (贞洁�
 module:RegisterDebuff(TIER, INSTANCE, 1825, 227789)     -- 群体忏悔 (神圣之地)
 module:RegisterDebuff(TIER, INSTANCE, 1835, 227404, 0)  -- 无形_已被移除 (猎手阿图门)
 module:RegisterDebuff(TIER, INSTANCE, 1835, 227493)     -- 致死打击
-module:RegisterDebuff(TIER, INSTANCE, 1837, 227832)     -- 保管外套 (莫罗斯)
+module:RegisterDebuff(TIER, INSTANCE, 1837, 227832, 3)  -- 保管外套 (莫罗斯)
 module:RegisterDebuff(TIER, INSTANCE, 1837, 227742)     -- 锁喉 (莫罗斯)
-module:RegisterDebuff(TIER, INSTANCE, 1827, 227985)     -- 削弱护甲(歌剧院:美女与野兽-库格斯顿)
-module:RegisterDebuff(TIER, INSTANCE, 1826, 227325)      -- 剧毒匕首 (歌剧院:西部故事-黑帮恶棍)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227981)        -- 上勾拳 (鬼灵顾客)
+module:RegisterDebuff(TIER, INSTANCE, 1827, 227985)     -- 削弱护甲 (歌剧院:美女与野兽-库格斯顿)
+module:RegisterDebuff(TIER, INSTANCE, 1826, 227325)     -- 剧毒匕首 (歌剧院:西部故事-黑帮恶棍)
+module:RegisterDebuff(TIER, INSTANCE, 1826, 227777)     -- 雷霆仪式 (歌剧院:西部故事-黑帮恶棍)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228252)        -- 暗影撕裂 (弃灵)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228278)        -- 挫志怒吼 (鬼灵侍从)
+module:RegisterDebuff(TIER, INSTANCE, 0, 238606)        -- 奥术爆发 (奥术守卫)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228333)        -- 爆裂充能
+module:RegisterDebuff(TIER, INSTANCE, 0, 228610)        -- 燃烧之烙
+module:RegisterDebuff(TIER, INSTANCE, 0, 228277)        -- 仆役的镣铐
 module:RegisterDebuff(TIER, INSTANCE, 0, 227977)        -- 炫目灯光 (骷髅招待员)
 module:RegisterDebuff(TIER, INSTANCE, 0, 228576)        -- 被诱惑 (保守的女招待)
 module:RegisterDebuff(TIER, INSTANCE, 0, 228526)        -- 调情 (洗心革面的侍女)
