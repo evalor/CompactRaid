@@ -12,6 +12,14 @@ local TIER = 9 -- Shadowlands
 local INSTANCE -- 5人本
 
 INSTANCE = 1194 -- 塔扎维什，帷纱集市
+
+module:RegisterDebuff(TIER, INSTANCE, 0, 209858, 1) -- 词缀: 死疽溃烂
+module:RegisterDebuff(TIER, INSTANCE, 0, 240559, 1) -- 词缀: 重伤
+module:RegisterDebuff(TIER, INSTANCE, 0, 243237, 1) -- 词缀: 爆裂
+module:RegisterDebuff(TIER, INSTANCE, 0, 373391, 1) -- 词缀: 纳斯雷兹姆潜入者-梦魇(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 373429, 1) -- 词缀: 纳斯雷兹姆潜入者-腐臭虫群(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 373570, 1) -- 词缀: 祖尔加玛斯-催眠(4赛季)
+
 module:RegisterDebuff(TIER, INSTANCE, 0, 356011) -- 光线切分者
 module:RegisterDebuff(TIER, INSTANCE, 0, 347949, 6) -- 审讯
 module:RegisterDebuff(TIER, INSTANCE, 0, 345770) -- 扣押违禁品
