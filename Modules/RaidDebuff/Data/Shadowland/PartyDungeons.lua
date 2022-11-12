@@ -19,6 +19,7 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 243237, 1) -- 词缀: 爆裂
 module:RegisterDebuff(TIER, INSTANCE, 0, 373391, 1) -- 词缀: 纳斯雷兹姆潜入者-梦魇(4赛季)
 module:RegisterDebuff(TIER, INSTANCE, 0, 373429, 1) -- 词缀: 纳斯雷兹姆潜入者-腐臭虫群(4赛季)
 module:RegisterDebuff(TIER, INSTANCE, 0, 373570, 1) -- 词缀: 祖尔加玛斯-催眠(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 374273, 1) -- 词缀: 祖尔加玛斯-暗影利爪(4赛季)
 
 module:RegisterDebuff(TIER, INSTANCE, 0, 356011) -- 光线切分者
 module:RegisterDebuff(TIER, INSTANCE, 0, 347949, 6) -- 审讯

@@ -10,6 +10,7 @@ if not module then return end
 
 local TIER = 7 -- Legion
 local INSTANCE
+local BOSS
 
 -- Maw of Souls (727)
 INSTANCE = 727
@@ -150,30 +151,49 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 214002)
 module:RegisterDebuff(TIER, INSTANCE, 0, 200084)
 module:RegisterDebuff(TIER, INSTANCE, 0, 200261)
 
--- Kalazan (860)
+-- Kalazan 重返卡拉赞 (860)
 INSTANCE = 860
-module:RegisterDebuff(TIER, INSTANCE, 0, 227325)
-module:RegisterDebuff(TIER, INSTANCE, 0, 240559, 1)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227985)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227789)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227508)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227404)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227493)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227832)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227742)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227628)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227615)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227592)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227523)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227502)
-module:RegisterDebuff(TIER, INSTANCE, 0, 229083)
-module:RegisterDebuff(TIER, INSTANCE, 0, 229159, 5)
-module:RegisterDebuff(TIER, INSTANCE, 0, 227977)
-module:RegisterDebuff(TIER, INSTANCE, 0, 228796, 5)
-module:RegisterDebuff(TIER, INSTANCE, 0, 228526)
-module:RegisterDebuff(TIER, INSTANCE, 0, 228576)
-module:RegisterDebuff(TIER, INSTANCE, 0, 228280)
-module:RegisterDebuff(TIER, INSTANCE, 0, 228829)
+
+module:RegisterDebuff(TIER, INSTANCE, 0, 209858, 1) -- 词缀: 死疽溃烂
+module:RegisterDebuff(TIER, INSTANCE, 0, 240559, 1) -- 词缀: 重伤
+module:RegisterDebuff(TIER, INSTANCE, 0, 243237, 1) -- 词缀: 爆裂
+module:RegisterDebuff(TIER, INSTANCE, 0, 373391, 1) -- 词缀: 纳斯雷兹姆潜入者-梦魇(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 373429, 1) -- 词缀: 纳斯雷兹姆潜入者-腐臭虫群(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 373570, 1) -- 词缀: 祖尔加玛斯-催眠(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 374273, 1) -- 词缀: 祖尔加玛斯-暗影利爪(4赛季)
+
+-- 卡拉赞上层
+module:RegisterDebuff(TIER, INSTANCE, 1836, 227465)     -- 能量释放 (馆长)
+module:RegisterDebuff(TIER, INSTANCE, 1817, 228524)     -- 闪光术 (麦迪文之影)
+module:RegisterDebuff(TIER, INSTANCE, 1817, 228261, 6)  -- 烈焰花环 (麦迪文之影)
+module:RegisterDebuff(TIER, INSTANCE, 1817, 227592)     -- 霜寒 (麦迪文之影)
+module:RegisterDebuff(TIER, INSTANCE, 1817, 227615)     -- 炼狱箭 (麦迪文之影)
+module:RegisterDebuff(TIER, INSTANCE, 1817, 227628)     -- 穿刺飞弹 (麦迪文之影)
+module:RegisterDebuff(TIER, INSTANCE, 1818, 227502)     -- 不稳定的法力 (魔力吞噬者)
+module:RegisterDebuff(TIER, INSTANCE, 1818, 227523)     -- 能量虚空 (魔力吞噬者)
+module:RegisterDebuff(TIER, INSTANCE, 1838, 229159, 5)  -- 混沌暗影 (监视者维兹艾德姆)
+module:RegisterDebuff(TIER, INSTANCE, 1838, 229241, 6)  -- 获取目标_被邪能光束锁定 (监视者维兹艾德姆)
+module:RegisterDebuff(TIER, INSTANCE, 1838, 229083)     -- 炙热冲击 (监视者维兹艾德姆)
+module:RegisterDebuff(TIER, INSTANCE, 0, 230083)        -- 废灵 (抽象终结者)
+module:RegisterDebuff(TIER, INSTANCE, 0, 229705)        -- 蛛网 (蜘蛛)
+module:RegisterDebuff(TIER, INSTANCE, 0, 229706)        -- 汲取生命 (蜘蛛)
+
+-- 卡拉赞下层
+module:RegisterDebuff(TIER, INSTANCE, 1825, 227508)     -- 群体忏悔 (贞洁圣女)
+module:RegisterDebuff(TIER, INSTANCE, 1825, 227789)     -- 群体忏悔 (神圣之地)
+module:RegisterDebuff(TIER, INSTANCE, 1835, 227404, 0)  -- 无形_已被移除 (猎手阿图门)
+module:RegisterDebuff(TIER, INSTANCE, 1835, 227493)     -- 致死打击
+module:RegisterDebuff(TIER, INSTANCE, 1837, 227832)     -- 保管外套 (莫罗斯)
+module:RegisterDebuff(TIER, INSTANCE, 1837, 227742)     -- 锁喉 (莫罗斯)
+module:RegisterDebuff(TIER, INSTANCE, 1827, 227985)     -- 削弱护甲(歌剧院:美女与野兽-库格斯顿)
+module:RegisterDebuff(TIER, INSTANCE, 1826, 227325)      -- 剧毒匕首 (歌剧院:西部故事-黑帮恶棍)
+module:RegisterDebuff(TIER, INSTANCE, 0, 227981)        -- 上勾拳 (鬼灵顾客)
+module:RegisterDebuff(TIER, INSTANCE, 0, 227977)        -- 炫目灯光 (骷髅招待员)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228576)        -- 被诱惑 (保守的女招待)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228526)        -- 调情 (洗心革面的侍女)
+module:RegisterDebuff(TIER, INSTANCE, 0, 228280)        -- 忠诚誓言 (鬼灵家仆)
+-- module:RegisterDebuff(TIER, INSTANCE, 0, 228829)     -- 炽燃之骨_已被移除 (夜之魇)
+-- module:RegisterDebuff(TIER, INSTANCE, 0, 228796)     -- 燃魂_已被移除 (夜之魇)
 
 -- Cathedral of Eternal Night (900)
 INSTANCE = 900

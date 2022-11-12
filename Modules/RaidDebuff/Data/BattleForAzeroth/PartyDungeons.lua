@@ -239,19 +239,20 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 274149, 3)
 module:RegisterDebuff(TIER, INSTANCE, 0, 269686, 3)
 
 INSTANCE = 1178 -- 麦卡贡行动
-module:RegisterDebuff(TIER, INSTANCE, 0, 209858, 1)    -- 词缀: 死疽溃烂
+module:RegisterDebuff(TIER, INSTANCE, 0, 209858, 1) -- 词缀: 死疽溃烂
 module:RegisterDebuff(TIER, INSTANCE, 0, 240559, 1) -- 词缀: 重伤
 module:RegisterDebuff(TIER, INSTANCE, 0, 243237, 1) -- 词缀: 爆裂
 module:RegisterDebuff(TIER, INSTANCE, 0, 373391, 1) -- 词缀: 纳斯雷兹姆潜入者-梦魇(4赛季)
 module:RegisterDebuff(TIER, INSTANCE, 0, 373429, 1) -- 词缀: 纳斯雷兹姆潜入者-腐臭虫群(4赛季)
 module:RegisterDebuff(TIER, INSTANCE, 0, 373570, 1) -- 词缀: 祖尔加玛斯-催眠(4赛季)
+module:RegisterDebuff(TIER, INSTANCE, 0, 374273, 1) -- 词缀: 祖尔加玛斯-暗影利爪(4赛季)
 
 -- 麦卡贡行动:垃圾场
 module:RegisterDebuff(TIER, INSTANCE, 2357, 297257)     -- 电荷充能 (戈巴马克国王)
 module:RegisterDebuff(TIER, INSTANCE, 2358, 298259, 6)  -- 束缚粘液 (冈克)
 module:RegisterDebuff(TIER, INSTANCE, 2360, 298669)     -- 跳电 (崔克茜和耐诺)
 module:RegisterDebuff(TIER, INSTANCE, 2355, 302274)     -- 爆裂冲击 (HK-8型空中压制单位)
-module:RegisterDebuff(TIER, INSTANCE, 0, 300436)        -- 烟云 (纠缠妖术)
+module:RegisterDebuff(TIER, INSTANCE, 0, 300436)        -- 纠缠妖术 (屑骨萨满)
 module:RegisterDebuff(TIER, INSTANCE, 0, 298602)        -- 烟云 (失控的拳机)
 module:RegisterDebuff(TIER, INSTANCE, 0, 301712, 6)     -- 突袭 (麦卡贡徘徊者)
 module:RegisterDebuff(TIER, INSTANCE, 0, 299572, 6)     -- 缩小 (麦卡贡重整者)
@@ -263,7 +264,9 @@ module:RegisterDebuff(TIER, INSTANCE, 0, 299475)        -- 音速咆哮 (废钢�
 module:RegisterDebuff(TIER, INSTANCE, 2339, 291972)     -- 爆燃之跃 (狂犬K.U.-J.0)
 module:RegisterDebuff(TIER, INSTANCE, 2339, 294929)     -- 烈焰撕咬 (狂犬K.U.-J.0)
 module:RegisterDebuff(TIER, INSTANCE, 2348, 294855)     -- 电荷绽放 (机械师的花园)
+module:RegisterDebuff(TIER, INSTANCE, 2348, 285443, 6)  -- "隐秘"烈焰火炮 (机械师的花园)
 module:RegisterDebuff(TIER, INSTANCE, 2331, 292267, 6)  -- 超荷电磁炮 (麦卡贡国王-来自欧米茄破坏者)
 module:RegisterDebuff(TIER, INSTANCE, 0, 293986)        -- 声波脉冲 (蜘蛛坦克/爆破金刚等)
 module:RegisterDebuff(TIER, INSTANCE, 0, 294180)        -- 反抗烈焰 (D.0.G.型垃圾场巡犬)
 module:RegisterDebuff(TIER, INSTANCE, 0, 294195)        -- 电弧波动炮 (防御机器人MkI型)
+module:RegisterDebuff(TIER, INSTANCE, 0, 295182)        -- 电容器放电 (爆破金刚X-80型)
