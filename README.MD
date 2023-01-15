@@ -1,3 +1,8 @@
+
+
+> Since I play games in china domestic server, this project is no longer maintained.
+
+
 # CompactRaid
 
 An AddOn for the World of Warcraft.
